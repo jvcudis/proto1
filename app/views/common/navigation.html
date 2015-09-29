@@ -1,0 +1,57 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" dropdown>
+                  Collab
+                </div>
+                <div class="logo-element">
+                    C
+                </div>
+
+            </li>
+
+            <li ng-class="{active: $state.includes('patients') || $state.includes('patient_card')}">
+                <a ui-sref="patients"><i class="fa fa-group"></i> <span class="nav-label">Patienten</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="notifications"><i class="fa fa-bullhorn"></i> <span class="nav-label">Notifications</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="call_list"><i class="fa fa-phone"></i> <span class="nav-label">Oproeplijst funduscreening</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="calendar"><i class="fa fa-calendar"></i> <span class="nav-label">Kalender</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('work_list')}">
+                <a href="work_list/index.html"><i class="fa fa-list-alt"></i> <span class="nav-label">Werklijsten</span> <span class="fa arrow"></span> </a>
+
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('work_list')}">
+                  <li ui-sref-active="active">
+                      <a ui-sref="work_list.asthma"> Asthma Patienten </a>
+                  </li>
+                  <li ui-sref-active="active">
+                      <a ui-sref="work_list.copd"> COPD Patienten </a>
+                  </li>
+                  <li ui-sref-active="active">
+                      <a ui-sref="work_list.cvrm"> CVRM Patienten </a>
+                  </li>
+                  <li ui-sref-active="active">
+                      <a ui-sref="work_list.diabetes"> Diabetes Patienten </a>
+                  </li>
+                  <li ui-sref-active="active">
+                      <a ui-sref="work_list.monitor"> Monitor Asthma </a>
+                  </li>
+                </ul>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="reports"><i class="fa fa-area-chart"></i> <span class="nav-label">Rapportages</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="clinic_settings"><i class="fa fa-gears"></i> <span class="nav-label">Kliniek instellingen</span> </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,490 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+  <!-- Navigation -->
+  <div ng-include="'views/common/navigation.html'"></div>
+
+  <!-- Page wraper -->
+  <!-- ng-class with current state name give you the ability to extended customization your view -->
+  <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <div ng-include="'views/common/topnavbar.html'"></div>
+
+    <!-- Main view  -->
+    <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="ibox float-e-margins">
+            <!-- List Header -->
+            <div class="ibox-title">
+              <h5>Alle patienten</h5>
+
+              <!-- Filter Conditions -->
+              <div class="ibox-filter ibox-tools pull-left">
+
+                <div class="btn-group" dropdown >
+                  <button type="button" class="btn btn-header-filter btn-sm dropdown-toggle" dropdown-toggle>
+                    Alle praktijken
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="item-label"><span>Praktijken</span></li>
+                    <li><a href="">Alle praktijken</a></li>
+                    <li class="divider"></li>
+                    <li class="item-label"><span>HZNK</span></li>
+                    <li><a href="">HZNKHaPraktijk1</a></li>
+                    <li><a href="">HZNKHaPraktijk2</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group" dropdown >
+                  <button type="button" class="btn btn-header-filter btn-sm dropdown-toggle" dropdown-toggle>
+                    Alle modules
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="item-label"><span>Module</span></li>
+                    <li><a href="">Alle modules</a></li>
+                    <li class="divider"></li>
+                    <li class="item-label"><span>HZNK</span></li>
+                    <li><a href="">Ashtma</a></li>
+                    <li><a href="">COPD</a></li>
+                    <li><a href="">CVRM</a></li>
+                    <li><a href="">Diabetes</a></li>
+                    <li><a href="">Dietetiek</a></li>
+                    <li><a href="">Module info</a></li>
+                    <li><a href="">Ouderenzorg FIT</a></li>
+                    <li><a href="">Pedicure</a></li>
+                    <li><a href="">Podotherapie</a></li>
+                    <li><a href="">Zorgpaden</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group" dropdown >
+                  <button type="button" class="btn btn-header-filter btn-sm dropdown-toggle" dropdown-toggle>
+                    Alle rollen
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="item-label"><span>Role</span></li>
+                    <li><a href="">Alle rollen</a></li>
+                    <li class="divider"></li>
+                    <li class="item-label"><span>HZNK</span></li>
+                    <li><a href="">POH</a></li>
+                    <li><a href="">Diabetesverpleegkundige</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="ibox-tools">
+                <button type="button" class="btn btn-header btn-xs"><i class="fa fa-plus"></i>&nbsp;&nbsp;Nieuwe NZNK Patient</button>
+              </div>
+            </div>
+
+            <!-- List Content -->
+            <div class="ibox-content">
+
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Patient</th>
+                      <th>Geboortedatum</th>
+                      <th class="text-center">Geslacht</th>
+                      <th>Modules</th>
+                      <th>Praktijk</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      <td>
+                        <a ui-sref="patient_card">Patient 1, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        01-01-1961 &#8212; 54
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Diabetes</span>
+                        <span class="label label-info">Module info</span>
+                        <span class="label label-info">Ouderenzorg FIT</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 1, HZNKHaPraktijk2</a>
+                      </td>
+                      <td>
+                        02-02-1937 &#8212; 78
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Diabetes</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk2
+                      </td>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 10, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        10-10-1970 &#8212; 44
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Diabetes</span>
+                        <span class="label label-info">Module info</span>
+                        <span class="label label-info">Dietetiek</span>
+                        <span class="label label-info">Podotherapie</span>
+                        <span class="label label-info">Pedicure</span>
+                        <span class="label label-info">Ouderenzorg FIT</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 10, HZNKHaPraktijk2</a>
+                      </td>
+                      <td>
+                        11-11-1970 &#8212; 44
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Diabetes</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk2
+                      </td>
+                    </tr>
+                    <!-- row 5 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 100, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        13-04-1936 &#8212; 79
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 6 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 101, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        14-05-1937 &#8212; 78
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                        <span class="label label-info">CVRM</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 7 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 102, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        15-06-1938 &#8212; 77
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                        <span class="label label-info">Ouderenzorg FIT</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 8 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 103, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        16-07-1939 &#8212; 76
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 9 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 104, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        17-08-1940 &#8212; 75
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 10 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 105, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        18-09-1941 &#8212; 73
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 11 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 106, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        19-10-1942 &#8212; 72
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 12 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 107, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        20-11-1943 &#8212; 71
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 13 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 108, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        22-01-1944 &#8212; 71
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 14 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 109, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        22-01-1945 &#8212; 70
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 15 -->
+                    <tr>
+                      <td>
+                        <a href="">Patient 11, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        11-11-1971 &#8212; 43
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">Podotherapie</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Diabetes</span>
+                        <span class="label label-info">Module info</span>
+                        <span class="label label-info">Dietetiek</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 16 -->
+                    <!-- <tr> -->
+                      <td>
+                        <a href="">Patient 110, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        23-02-1946 &#8212; 69
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">Asthma</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 17 -->
+                    <!-- <tr> -->
+                      <td>
+                        <a href="">Patient 111, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        24-03-1947 &#8212; 68
+                      </td>
+                      <td class="text-center">
+                        M
+                      </td>
+                      <td>
+                        <span class="label label-info">CVRM</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                    <!-- row 18 -->
+                    <!-- <tr> -->
+                      <td>
+                        <a href="">Patient 112, HZNKHaPraktijk1</a>
+                      </td>
+                      <td>
+                        25-04-1948 &#8212; 67
+                      </td>
+                      <td class="text-center">
+                        V
+                      </td>
+                      <td>
+                        <span class="label label-info">CVRM</span>
+                        <span class="label label-info">Zorgpaden</span>
+                        <span class="label label-info">Module info</span>
+                      </td>
+                      <td>
+                        HZNKHaPraktijk1
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> <!-- end of table-responsive -->
+
+              <div class="row">
+                <div class="pull-left table-pagination-info">
+                  <div class="dataTables_info"> Showing 1 to 15 of 90 patients </div>
+                </div>
+
+                <div class="pull-right table-pagination">
+                  <pagination total-items="main.bigTotalItems" ng-model="main.bigCurrentPage" max-size="main.maxSize" class="pagination-sm" boundary-links="true"></pagination>
+                </div>
+              </div>
+
+            </div> <!-- end of ibox-content -->
+          </div> <!-- end of ibox -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div ng-include="'views/common/footer.html'"></div>
+
+  </div>
+  <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
